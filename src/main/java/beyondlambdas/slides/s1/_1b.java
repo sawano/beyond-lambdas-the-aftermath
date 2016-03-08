@@ -18,14 +18,17 @@ package beyondlambdas.slides.s1;
 
 import java.util.Optional;
 
-public class _1 {
+import static beyondlambdas.slides.s1.Advise.currentAdvise;
 
-    void _() {
-        final Advise advise = new Advise();
+public class _1b {
 
-        Optional.of(advise)
-                .map(Advise::cheap)
-                .orElse(advise.expensive());
+    final Oracle oracle = new Oracle();
 
+    String _() {
+        final Advise advise = currentAdvise();
+
+        return Optional.ofNullable(advise)
+                       .map(Advise::cheap)
+                       .orElse(oracle.advise().expensive());
     }
 }

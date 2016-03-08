@@ -26,8 +26,8 @@ import static se.sawano.java.commons.lang.validate.Validate.validState;
 //16
 public class _8 {
 
-    private final UserService userService = new UserService();
-    private final OrderService orderService = new OrderService();
+     final UserService userService = new UserService();
+     final OrderService orderService = new OrderService();
 
     @Test
     public void _() {

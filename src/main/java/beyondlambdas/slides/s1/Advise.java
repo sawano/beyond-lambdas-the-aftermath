@@ -17,6 +17,10 @@
 package beyondlambdas.slides.s1;
 
 final class Advise {
+    public static Advise currentAdvise() {
+        return Math.random() > 0.5 ? new Advise() : null;
+    }
+
     public String cheap() {
         return "Cheap message";
     }

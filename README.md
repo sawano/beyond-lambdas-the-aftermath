@@ -1,5 +1,5 @@
 #Beyond lambdas, the aftermath
-This presentation was given at the [JFokus](http://www.jfokus.se) conference in Stockholm, 2016
+This repo contains the example code used in the presentation "Beyond lambdas, the aftermath" given by Daniel Deogun and Daniel Sawano.
 
 ##Abstract
 As Java developers we are used to having rich ecosystems of libraries and tools that make our lives easier. As of the release of Java 8, we finally got our hands on 
@@ -27,7 +27,6 @@ Master of science and a Java programmer for 14+ years. Loves creativity, beautif
 cloud computing and agile methodologies.
 
 ![Twitter][twitter img] **@DanielSawano**
-
 
 
 [deogun img]:daniel_deogun.jpg

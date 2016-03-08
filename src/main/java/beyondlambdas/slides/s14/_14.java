@@ -21,7 +21,8 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 public class _14 {
-    private final String pattern;
+
+    final String pattern;
 
     public _14(final String pattern) {
         this.pattern = pattern;

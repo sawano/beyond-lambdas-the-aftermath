@@ -1,6 +1,8 @@
 #Beyond lambdas, the aftermath
 This repo contains the example code used in the presentation "Beyond lambdas, the aftermath" given by Daniel Deogun and Daniel Sawano.
 
+Slides for the related presentations can be found here: [http://www.slideshare.net/sawano](http://www.slideshare.net/sawano) 
+
 ##Abstract
 As Java developers we are used to having rich ecosystems of libraries and tools that make our lives easier. As of the release of Java 8, we finally got our hands on 
 building blocks like lambdas, optionals, and streams. All sorts of tools that help us write more concise code. But now, when the honeymoon is over, are there any 
@@ -17,7 +19,7 @@ Coder and Quality defender; fights security trolls on a daily basis using Domain
 Daniel's extensive experience ranges from patient critical pacemaker systems to high performant software in the gaming industry. Combining this with his passion for 
 DDD and his interest in security has made him a strong advocate of Domain Driven Security.
 
-![Twitter][twitter img] **@DanielDeogun**
+![Twitter][twitter img] **[@DanielDeogun](https://twitter.com/DanielDeogun)**
 
 ###Daniel Sawano
 ![Daniel Sawano][sawano img]
@@ -26,7 +28,7 @@ Developer, architect, public speaker, agile dude and sporadic blogger. Long-time
 Master of science and a Java programmer for 14+ years. Loves creativity, beautiful software, DDD, TDD/BDD and a whole bunch of other acronyms. Passionate about 
 cloud computing and agile methodologies.
 
-![Twitter][twitter img] **@DanielSawano**
+![Twitter][twitter img] **[@DanielSawano](https://twitter.com/DanielSawano)**
 
 
 [deogun img]:daniel_deogun.jpg

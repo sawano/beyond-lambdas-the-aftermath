@@ -14,33 +14,25 @@
  * limitations under the License.
  */
 
-package beyondlambdas.slides.s11;
-
-import org.junit.Test;
+package beyondlambdas.slides.s14;
 
 import java.util.List;
 
-import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.toList;
 
-//29
-public class _11 {
+@SuppressWarnings("unused")
+public class _14a {
 
-    @Test
-    public void _() {
+    final String pattern;
 
-        final List<Integer> values = asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-
-        allEvenNumbers(values);
-
-        System.out.println("Hello");
-
+    public _14a(final String pattern) {
+        this.pattern = pattern;
     }
 
-    static List<Integer> allEvenNumbers(final List<Integer> values) {
-        return values.stream()
-                     .filter(Support::isEven)
-                     .collect(toList());
+    public List<String> allMatchingElements(final List<String> elements) {
+        return elements.stream()
+                       .filter(e -> e.contains(pattern))
+                       .collect(toList());
     }
 
 }

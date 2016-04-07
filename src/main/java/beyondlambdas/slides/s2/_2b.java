@@ -20,7 +20,6 @@ import java.util.Optional;
 
 import static beyondlambdas.slides.s2.Support.*;
 
-@SuppressWarnings("Convert2MethodRef")
 public class _2b {
 
     String _(final Optional<String> optOfSomeValue) {

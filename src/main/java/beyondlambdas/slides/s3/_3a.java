@@ -22,7 +22,7 @@ import static beyondlambdas.slides.s3.Support.doSomething;
 
 //3
 @SuppressWarnings("Convert2MethodRef")
-public class _3 {
+public class _3a {
 
     <T> void _(final Optional<T> argument) {
         argument.map(a -> doSomething(a));

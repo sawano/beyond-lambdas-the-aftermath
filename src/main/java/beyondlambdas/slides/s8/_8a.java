@@ -24,10 +24,10 @@ import static java.lang.String.format;
 import static se.sawano.java.commons.lang.validate.Validate.validState;
 
 //16
-public class _8 {
+public class _8a {
 
-     final UserService userService = new UserService();
-     final OrderService orderService = new OrderService();
+    final UserService userService = new UserService();
+    final OrderService orderService = new OrderService();
 
     @Test
     public void _() {

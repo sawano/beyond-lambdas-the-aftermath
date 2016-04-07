@@ -14,25 +14,25 @@
  * limitations under the License.
  */
 
-package beyondlambdas.slides.s7;
+package beyondlambdas.slides.s10;
 
 import org.junit.Test;
 
-import java.util.function.Predicate;
+import static org.junit.Assert.assertEquals;
 
-import static beyondlambdas.slides.s7.Support.service;
-
-public class _7 {
+public class _10a {
 
     @Test
-    public void _() {
+    public void should_build_tesla() {
 
-        final long idToFind = 6;
-        final Predicate<Item> idFilter = item -> item.id().equals(idToFind);
+        assertEquals(1000, new TeslaFactory().createTesla().engine().horsepower());
 
-        service().itemsMatching(idFilter)
-                 .findFirst()
-                 .ifPresent(Support::doSomething);
+    }
+
+    @Test
+    public void should_build_volvo() {
+
+        assertEquals(250, new VolvoFactory().createVolvo().engine().horsepower());
 
     }
 }

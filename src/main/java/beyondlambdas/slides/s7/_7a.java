@@ -14,24 +14,25 @@
  * limitations under the License.
  */
 
-package beyondlambdas.slides.s14;
+package beyondlambdas.slides.s7;
 
-import java.util.List;
+import org.junit.Test;
 
-import static java.util.stream.Collectors.toList;
+import java.util.function.Predicate;
 
-public class _14 {
+import static beyondlambdas.slides.s7.Support.service;
 
-    final String pattern;
+public class _7a {
 
-    public _14(final String pattern) {
-        this.pattern = pattern;
+    @Test
+    public void _() {
+
+        final long idToFind = 6;
+        final Predicate<Item> idFilter = item -> item.id().equals(idToFind);
+
+        service().itemsMatching(idFilter)
+                 .findFirst()
+                 .ifPresent(Support::doSomething);
+
     }
-
-    public List<String> allMatchingElements(final List<String> elements) {
-        return elements.stream()
-                       .filter(e -> e.contains(pattern))
-                       .collect(toList());
-    }
-
 }

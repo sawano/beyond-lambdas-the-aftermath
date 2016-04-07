@@ -14,32 +14,33 @@
  * limitations under the License.
  */
 
-package beyondlambdas.slides.s6;
+package beyondlambdas.slides.s11;
 
 import org.junit.Test;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.joining;
-import static org.junit.Assert.assertEquals;
+import static java.util.stream.Collectors.toList;
 
-public class _6 {
+//29
+public class _11a {
 
     @Test
     public void _() {
 
-        final Stream<String> stream = elements().stream()
-                                                .sorted();
+        final List<Integer> values = asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-        final String result = stream.collect(joining(","));
+        allEvenNumbers(values);
 
-        assertEquals("A,B,C", result);
+        System.out.println("Hello");
 
     }
 
-    static List<String> elements() {
-        return asList("C", "B", null, "A");
+    static List<Integer> allEvenNumbers(final List<Integer> values) {
+        return values.stream()
+                     .filter(Support::isEven)
+                     .collect(toList());
     }
+
 }

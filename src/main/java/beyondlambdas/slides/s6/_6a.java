@@ -14,25 +14,32 @@
  * limitations under the License.
  */
 
-package beyondlambdas.slides.s10;
+package beyondlambdas.slides.s6;
 
 import org.junit.Test;
 
+import java.util.List;
+import java.util.stream.Stream;
+
+import static java.util.Arrays.asList;
+import static java.util.stream.Collectors.joining;
 import static org.junit.Assert.assertEquals;
 
-public class _10 {
+public class _6a {
 
     @Test
-    public void should_build_tesla() {
+    public void _() {
 
-        assertEquals(1000, new TeslaFactory().createTesla().engine().horsepower());
+        final Stream<String> stream = elements().stream()
+                                                .sorted();
+
+        final String result = stream.collect(joining(","));
+
+        assertEquals("A,B,C", result);
 
     }
 
-    @Test
-    public void should_build_volvo() {
-
-        assertEquals(250, new VolvoFactory().createVolvo().engine().horsepower());
-
+    static List<String> elements() {
+        return asList("C", "B", null, "A");
     }
 }

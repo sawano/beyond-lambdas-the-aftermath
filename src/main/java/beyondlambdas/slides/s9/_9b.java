@@ -24,13 +24,14 @@ import static beyondlambdas.slides.s9.User.someUser;
 import static beyondlambdas.slides.s9._9a.numberOfFreeApples;
 import static java.lang.String.format;
 
+@SuppressWarnings("Convert2MethodRef")
 public class _9b {
 
     @Test
     public void _() {
 
         final Function<User, Integer> foodRatioForVisitors = u -> u.age() > 12 ? 2 : 1;
-        final Function<User, Integer> age = User::age;
+        final Function<User, Integer> age = (user) -> user.age();
 
         final int numberOfFreeApples_1 = numberOfFreeApples(someUser(), foodRatioForVisitors);
         final int numberOfFreeApples_2 = numberOfFreeApples(someUser(), age); // This is a bug!

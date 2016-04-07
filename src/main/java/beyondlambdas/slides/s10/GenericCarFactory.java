@@ -20,7 +20,7 @@ import java.util.function.Function;
 
 import static se.sawano.java.commons.lang.validate.Validate.notNull;
 
-public class GenericCarFactory implements CarFactory {
+class GenericCarFactory implements CarFactory {
     private final Function<CarFactory, Engine> engineStrategy;
 
     public GenericCarFactory(final Function<CarFactory, Engine> engineStrategy) {

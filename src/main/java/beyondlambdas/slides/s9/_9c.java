@@ -23,6 +23,7 @@ import java.util.function.Function;
 import static beyondlambdas.slides.s9.User.someUser;
 import static java.lang.String.format;
 
+@SuppressWarnings("Convert2MethodRef")
 public class _9c {
 
     @FunctionalInterface
@@ -40,7 +41,7 @@ public class _9c {
     public void _() {
 
         final FoodRatioStrategy foodRatioForVisitors = user -> user.age() > 12 ? 2 : 1;
-        final Function<User, Integer> age = User::age;
+        final Function<User, Integer> age = (user) -> user.age();
 
         final Integer numberOfFreeApples_1 = numberOfFreeApples(someUser(), foodRatioForVisitors);
         //final Integer numberOfFreeApples_2 = numberOfFreeApples(someUser(), age);

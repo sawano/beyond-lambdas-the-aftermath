@@ -34,10 +34,10 @@ class GenericCarFactory implements CarFactory {
     }
 
     @Override
-    public Generator generator() {
+    public Alternator alternator() {
         final Engine engine = engineStrategy.apply(this);
 
-        return engine.horsepower() > 400 ? new BadAssGenerator() : new NormalGenerator();
+        return engine.horsepower() > 400 ? new BadAssAlternator() : new NormalAlternator();
     }
 
     private static final class GenericCar implements Car {
@@ -53,11 +53,11 @@ class GenericCarFactory implements CarFactory {
         }
     }
 
-    private static final class BadAssGenerator implements Generator {
+    private static final class BadAssAlternator implements Alternator {
         //Bad Ass generator stuff
     }
 
-    private static final class NormalGenerator implements Generator {
+    private static final class NormalAlternator implements Alternator {
         //Normal generator stuff
     }
 }

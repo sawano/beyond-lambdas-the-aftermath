@@ -16,5 +16,4 @@
 
 package beyondlambdas.slides.s10;
 
-public interface Generator {
-}
+public interface Alternator {}

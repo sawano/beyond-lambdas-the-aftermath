@@ -17,5 +17,5 @@
 package beyondlambdas.slides.s10;
 
 public interface CarFactory {
-    Generator generator();
+    Alternator alternator();
 }

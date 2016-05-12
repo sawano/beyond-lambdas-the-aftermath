@@ -16,12 +16,18 @@
 
 package beyondlambdas.slides.s9;
 
+import java.util.stream.Stream;
+
 import static se.sawano.java.commons.lang.validate.Validate.isTrue;
 
 class User {
 
     public static User someUser() {
         return new User(12);
+    }
+
+    public static Stream<User> users() {
+        return Stream.empty();
     }
 
     private final int age;

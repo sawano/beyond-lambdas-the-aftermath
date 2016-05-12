@@ -16,10 +16,13 @@
 
 package beyondlambdas.slides.s1;
 
+import org.junit.Test;
+
 import java.util.Optional;
 
 import static beyondlambdas.slides.s1.Advise.currentAdvise;
 
+@SuppressWarnings("ConstantConditions")
 public class _1b {
 
     final Oracle oracle = new Oracle();
@@ -30,5 +33,10 @@ public class _1b {
         return Optional.ofNullable(advise)
                        .map(Advise::cheap)
                        .orElse(oracle.advise().expensive());
+    }
+
+    @Test
+    public void should_get_advice() {
+        _();
     }
 }

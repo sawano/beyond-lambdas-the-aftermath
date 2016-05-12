@@ -18,23 +18,17 @@ package beyondlambdas.slides.s1;
 
 final class Advise {
     public static Advise currentAdvise() {
-        return Math.random() > 0.5 ? new Advise() : null;
+        return new Advise();
     }
 
     public String cheap() {
+        System.out.println("Getting cheap advice...");
         return "Cheap message";
     }
 
     public String expensive() {
-        sleep();
+        System.out.println("Getting expensive advice...");
         return "Good advise don't come cheap...";
     }
 
-    private void sleep() {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 }

@@ -16,9 +16,11 @@
 
 package beyondlambdas.slides.s10;
 
+@SuppressWarnings("Convert2MethodRef")
 public class TeslaFactory {
+
     public Car createTesla() {
-        return GenericCarFactory.createCarWith(this::engine);
+        return GenericCarFactory.createCarWith((factory) -> engine(factory));
     }
 
     private Engine engine(final CarFactory factory) {

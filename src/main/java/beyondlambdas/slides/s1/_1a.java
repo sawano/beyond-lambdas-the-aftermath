@@ -2,6 +2,7 @@ package beyondlambdas.slides.s1;
 
 import static beyondlambdas.slides.s1.Advise.currentAdvise;
 
+@SuppressWarnings("ConstantConditions")
 public class _1a {
 
     final Oracle oracle = new Oracle();

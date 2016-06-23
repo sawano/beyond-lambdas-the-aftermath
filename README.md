@@ -15,9 +15,9 @@ what code constructs to avoid, and best practices to use, well then this session
 ###Daniel Deogun
 ![Daniel Deogun][deogun img]
 
-Coder and Quality defender; fights security trolls on a daily basis using Domain Driven Design and a security mindset. Frequent speaker at international conferences. 
-Daniel's extensive experience ranges from patient critical pacemaker systems to high performant software in the gaming industry. Combining this with his passion for 
-DDD and his interest in security has made him a strong advocate of Domain Driven Security.
+Coder and Quality defender; brings order to a chaotic world of bits and bytes through good design and clean code; fights security bugs on a daily basis using magic spells 
+from DDD and an overall security mindset. Daniel's extensive experience ranges from patient critical pacemaker systems to web applications to high performant software in the 
+gaming industry. Combining this with his passion for agile and tech has made him a frequent speaker at international conferences.
 
 ![Twitter][twitter img] **[@DanielDeogun](https://twitter.com/DanielDeogun)**
 

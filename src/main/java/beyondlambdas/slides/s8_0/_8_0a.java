@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package beyondlambdas.slides.s8;
+package beyondlambdas.slides.s8_0;
 
 import org.junit.Test;
 
-import static beyondlambdas.slides.s8.Support.givenALoggedInUser;
-import static beyondlambdas.slides.s8.Support.itemsToBuy;
+import static beyondlambdas.slides.s8_0.Support.givenALoggedInUser;
+import static beyondlambdas.slides.s8_0.Support.itemsToBuy;
 import static java.lang.String.format;
 import static se.sawano.java.commons.lang.validate.Validate.validState;
 
 //16
-public class _8a {
+public class _8_0a {
 
     final UserService userService = new UserService();
     final OrderService orderService = new OrderService();

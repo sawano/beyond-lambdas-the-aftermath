@@ -14,31 +14,28 @@
  * limitations under the License.
  */
 
-package beyondlambdas.slides.s9;
+package beyondlambdas.slides.s8_1;
 
 import org.junit.Test;
 
-import java.util.function.Function;
+import java.util.List;
+import java.util.stream.Stream;
 
-import static beyondlambdas.slides.s9.User.someUser;
-import static java.lang.String.format;
+import static beyondlambdas.slides.s8_1.Support.jsonData;
+import static beyondlambdas.slides.s8_1.Support.sendCouponTo;
+import static java.util.stream.Collectors.toList;
 
-public class _9a {
-
-    static Integer numberOfFreeApples(final User user,
-                                      final Function<User, Integer> foodRatio) {
-        return 2 * foodRatio.apply(user);
-    }
+public class _8_1a {
 
     @Test
     public void _() {
 
-        final Function<User, Integer> foodRatioForVisitors = u -> u.age() > 12 ? 2 : 1;
+        final Stream<String> jsonDataStream = jsonData();
 
-        final int numberOfFreeApples = numberOfFreeApples(someUser(), foodRatioForVisitors);
+        final List<User> users = jsonDataStream.map(Support::parseJson)
+                                               .collect(toList());
 
-        System.out.println(format("Number of free apples: %d", numberOfFreeApples));
+        sendCouponTo(users);
 
     }
-
 }

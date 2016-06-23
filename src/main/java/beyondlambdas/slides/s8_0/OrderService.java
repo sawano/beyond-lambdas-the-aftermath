@@ -14,30 +14,24 @@
  * limitations under the License.
  */
 
-package beyondlambdas.slides.s9;
+package beyondlambdas.slides.s8_0;
 
-import java.util.stream.Stream;
+import java.util.concurrent.atomic.AtomicLong;
 
-import static se.sawano.java.commons.lang.validate.Validate.isTrue;
+import static se.sawano.java.commons.lang.validate.Validate.notNull;
 
-class User {
+class OrderService {
 
-    public static User someUser() {
-        return new User(12);
+    private final AtomicLong sentOrders = new AtomicLong();
+
+    public void sendOrder(final Order order) {
+        notNull(order);
+
+        //Send to order management system...
+        sentOrders.incrementAndGet();
     }
 
-    public static Stream<User> users() {
-        return Stream.empty();
-    }
-
-    private final int age;
-
-    public User(final int age) {
-        isTrue(age > 0);
-        this.age = age;
-    }
-
-    public int age() {
-        return age;
+    public long sentOrders() {
+        return sentOrders.get();
     }
 }

@@ -14,33 +14,21 @@
  * limitations under the License.
  */
 
-package beyondlambdas.slides.s11;
+package beyondlambdas.slides.s8_0;
 
-import org.junit.Test;
+class UserService {
 
-import java.util.List;
+    private final ThreadLocal<User> currentUser = new ThreadLocal<>();
 
-import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.toList;
-
-//29
-public class _11a {
-
-    @Test
-    public void _() {
-
-        final List<Integer> values = asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-
-        allEvenNumbers(values);
-
-        System.out.println("Hello");
-
+    public User currentUser() {
+        return currentUser.get();
     }
 
-    static List<Integer> allEvenNumbers(final List<Integer> values) {
-        return values.stream()
-                     .filter(Support::isEven)
-                     .collect(toList());
+    public void setCurrentUser(final User user) {
+        currentUser.set(user);
     }
 
+    public void clearCurrentUser() {
+        currentUser.remove();
+    }
 }

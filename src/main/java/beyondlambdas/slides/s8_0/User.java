@@ -14,25 +14,17 @@
  * limitations under the License.
  */
 
-package beyondlambdas.slides.s8;
+package beyondlambdas.slides.s8_0;
 
 import static se.sawano.java.commons.lang.validate.Validate.notNull;
 
-final class Order {
+final class User {
 
-    private final Long itemId;
-    private final Long userId;
+    private final Long id;
 
-    public Order(final Long itemId, final Long userId) {
-        this.itemId = notNull(itemId);
-        this.userId = notNull(userId);
-    }
+    public User(final Long id) {this.id = notNull(id);}
 
-    public Long itemId() {
-        return itemId;
-    }
-
-    public Long userId() {
-        return userId;
+    public Long id() {
+        return id;
     }
 }

@@ -14,20 +14,34 @@
  * limitations under the License.
  */
 
-package beyondlambdas.slides.s8;
+package beyondlambdas.slides.s8_1;
 
-import beyondlambdas.slides.s7.Item;
-import beyondlambdas.slides.s7.ItemService;
+import org.junit.Test;
 
 import java.util.List;
+import java.util.stream.Stream;
 
-class Support {
+import static beyondlambdas.slides.s8_1.Support.*;
+import static java.util.stream.Collectors.toList;
 
-    public static void givenALoggedInUser(final UserService userService) {
-        userService.setCurrentUser(new User(123L));
+public class _8_1c {
+
+    @Test
+    public void _() {
+
+        final List<User> users = badJsonData().flatMap(this::tryParse)
+                                              .collect(toList());
+
+        sendCouponTo(users);
+
     }
 
-    public static List<Item> itemsToBuy() {
-        return new ItemService().allItems();
+    Stream<User> tryParse(final String json) {
+        try {
+            return Stream.of(parseJson(json));
+        } catch (Exception e) {
+            trackError(e);
+            return Stream.empty();
+        }
     }
 }

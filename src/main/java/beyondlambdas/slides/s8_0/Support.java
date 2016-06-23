@@ -14,17 +14,20 @@
  * limitations under the License.
  */
 
-package beyondlambdas.slides.s8;
+package beyondlambdas.slides.s8_0;
 
-import static se.sawano.java.commons.lang.validate.Validate.notNull;
+import beyondlambdas.slides.s7.Item;
+import beyondlambdas.slides.s7.ItemService;
 
-final class User {
+import java.util.List;
 
-    private final Long id;
+class Support {
 
-    public User(final Long id) {this.id = notNull(id);}
+    public static void givenALoggedInUser(final UserService userService) {
+        userService.setCurrentUser(new User(123L));
+    }
 
-    public Long id() {
-        return id;
+    public static List<Item> itemsToBuy() {
+        return new ItemService().allItems();
     }
 }

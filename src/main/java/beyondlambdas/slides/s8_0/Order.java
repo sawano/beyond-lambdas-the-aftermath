@@ -14,24 +14,25 @@
  * limitations under the License.
  */
 
-package beyondlambdas.slides.s8;
-
-import java.util.concurrent.atomic.AtomicLong;
+package beyondlambdas.slides.s8_0;
 
 import static se.sawano.java.commons.lang.validate.Validate.notNull;
 
-class OrderService {
+final class Order {
 
-    private final AtomicLong sentOrders = new AtomicLong();
+    private final Long itemId;
+    private final Long userId;
 
-    public void sendOrder(final Order order) {
-        notNull(order);
-
-        //Send to order management system...
-        sentOrders.incrementAndGet();
+    public Order(final Long itemId, final Long userId) {
+        this.itemId = notNull(itemId);
+        this.userId = notNull(userId);
     }
 
-    public long sentOrders() {
-        return sentOrders.get();
+    public Long itemId() {
+        return itemId;
+    }
+
+    public Long userId() {
+        return userId;
     }
 }
